@@ -11,13 +11,13 @@ It works by breaking files down, inspecting their internal structure, and search
 
 ## Features (v1.0)
 
-### 🔍 Detects Disguised Files and Hidden Data
+### Detects Disguised Files and Hidden Data
 `hex_specter` identifies files that have been renamed, altered, or structurally manipulated to appear harmless. It checks for mismatched file signatures, unusual formatting, and hidden indicators that suggest the file is not what it claims to be.
 
-### 🖼️ Finds Steganography and Secret Payloads
+### Finds Steganography and Secret Payloads
 The tool analyzes files — especially images and media formats — for hidden messages, embedded content, and suspicious payloads. It detects abnormal data patterns, encoding artifacts, and statistical irregularities that often indicate steganography.
 
-### 🔁 Investigates Multiple Hidden Layers Automatically
+### Investigates Multiple Hidden Layers Automatically
 `hex_specter` performs recursive, multi-layer analysis instead of stopping at the first level of a file. If a file contains nested archives, encoded segments, or obfuscated layers, the tool continues digging deeper automatically. Each layer is unpacked and inspected step by step, allowing it to reveal hidden structures buried inside other hidden structures.
 
 ---
@@ -26,9 +26,9 @@ The tool analyzes files — especially images and media formats — for hidden m
 
 What separates `hex_specter` from basic file checkers is its **layered forensic inspection model**. Most tools only analyze a file once at the surface level — looking at metadata or basic structure. `hex_specter` goes further by treating every file as a stack of possible hidden layers.
 
-- ✅ It doesn't stop at the first scan — it continues into nested structures
-- ✅ It assumes files may contain multiple levels of concealment
-- ✅ It combines signature checks + structural analysis + recursive inspection
+-  It doesn't stop at the first scan — it continues into nested structures
+-  It assumes files may contain multiple levels of concealment
+-  It combines signature checks + structural analysis + recursive inspection
 
 This layered approach makes it especially useful for **CTF challenges** and **cybersecurity practice**, where hidden data is often buried several levels deep inside other data.
 
