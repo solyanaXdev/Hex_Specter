@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>File Analyzer</h2>
+
+<input type="file" id="file">
+<br><br>
+
+<button onclick="analyze()">Scan File</button>
+
+<pre id="output"></pre>
+
+<script>
+async function analyze() {
+  const file = document.getElementById("file").files[0];
+
+  let formData = new FormData();
+  formData.append("file", file);
+
+  const res = await fetch("http://127.0.0.1:5000/analyze", {
+    method: "POST",
+    body: formData
+  });
+
+  const data = await res.json();
+
+  document.getElementById("output").innerText =
+    JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>
